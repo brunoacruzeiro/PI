@@ -1,0 +1,53 @@
+﻿<Window x:Class="PI.Paciente"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PI"
+        mc:Ignorable="d"
+        Title="Paciente" Height="600" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Label Content="ID" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtID" HorizontalAlignment="Left" Height="23" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+        <Label Content="Nome" HorizontalAlignment="Left" Margin="333,123,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtNome" HorizontalAlignment="Left" Height="23" Margin="333,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+        <Label Content="Sexo" HorizontalAlignment="Left" Margin="333,69,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtSexo" HorizontalAlignment="Left" Height="23" Margin="333,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+        <Label Content="Nascimento" HorizontalAlignment="Left" Margin="333,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtNascimento" HorizontalAlignment="Left" Height="23" Margin="333,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+        <Label Content="Endereco" HorizontalAlignment="Left" Margin="177,231,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtEndereco" HorizontalAlignment="Left" Height="23" Margin="177,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+        <Label Content="Locomocao" HorizontalAlignment="Left" Margin="177,177,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtLocomocao" HorizontalAlignment="Left" Height="23" Margin="177,203,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+        <Label Content="Renda" HorizontalAlignment="Left" Margin="177,123,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtRenda" HorizontalAlignment="Left" Height="23" Margin="177,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+        <Label Content="Religião" HorizontalAlignment="Left" Margin="177,69,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtReligiao" HorizontalAlignment="Left" Height="23" Margin="177,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.489,0.58"/>
+
+        <Label Content="Filhos" HorizontalAlignment="Left" Margin="177,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtFilho" HorizontalAlignment="Left" Height="23" Margin="177,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+        <Label Content="Escolaridade" HorizontalAlignment="Left" Margin="11,231,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtEscolaridade" HorizontalAlignment="Left" Height="23" Margin="11,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+        <Label Content="Profissão" HorizontalAlignment="Left" Margin="11,177,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtProfissao" HorizontalAlignment="Left" Height="23" Margin="11,203,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+        <Label Content="Estado Civil" HorizontalAlignment="Left" Margin="10,123,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtCivil" HorizontalAlignment="Left" Height="23" Margin="10,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+        <Label Content="Telefone" HorizontalAlignment="Left" Margin="10,69,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtTelefone" HorizontalAlignment="Left" Height="23" Margin="10,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <DataGrid x:Name="dgDados" HorizontalAlignment="Left" Height="223" Margin="10,336,0,0" VerticalAlignment="Top" Width="772"/>
+        <Button x:Name="btInserir" Content="Inserir" HorizontalAlignment="Left" Margin="12,298,0,0" VerticalAlignment="Top" Width="75" Click="btInserir_Click"/>
+        <Button x:Name="btExlcuir" Content="Excluir" HorizontalAlignment="Left" Margin="125,298,0,0" VerticalAlignment="Top" Width="75" Click="btExlcuir_Click"/>
+
+    </Grid>
+</Window>

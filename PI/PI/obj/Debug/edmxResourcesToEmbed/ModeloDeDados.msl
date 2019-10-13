@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PIModelStoreContainer" CdmEntityContainer="PIEntities">
+    <EntitySetMapping Name="CONSULTAs">
+      <EntityTypeMapping TypeName="PIModel.CONSULTA">
+        <MappingFragment StoreEntitySet="CONSULTA">
+          <ScalarProperty Name="ID_CONSULTA" ColumnName="ID_CONSULTA" />
+          <ScalarProperty Name="ID_FORMULARIO" ColumnName="ID_FORMULARIO" />
+          <ScalarProperty Name="ID_PACIENTE" ColumnName="ID_PACIENTE" />
+          <ScalarProperty Name="NOME_PACIENTE" ColumnName="NOME_PACIENTE" />
+          <ScalarProperty Name="NOME_RESPONSAVEL" ColumnName="NOME_RESPONSAVEL" />
+          <ScalarProperty Name="DATA_CONSULTA" ColumnName="DATA_CONSULTA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DIAGNOSTICOes">
+      <EntityTypeMapping TypeName="PIModel.DIAGNOSTICO">
+        <MappingFragment StoreEntitySet="DIAGNOSTICO">
+          <ScalarProperty Name="ID_DIAGNOSTICO" ColumnName="ID_DIAGNOSTICO" />
+          <ScalarProperty Name="ID_CONSULTA" ColumnName="ID_CONSULTA" />
+          <ScalarProperty Name="DATA_DIAGNOSTICO" ColumnName="DATA_DIAGNOSTICO" />
+          <ScalarProperty Name="NOME_PACIENTE" ColumnName="NOME_PACIENTE" />
+          <ScalarProperty Name="NUMERO_ITEM" ColumnName="NUMERO_ITEM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DOSAGEMs">
+      <EntityTypeMapping TypeName="PIModel.DOSAGEM">
+        <MappingFragment StoreEntitySet="DOSAGEM">
+          <ScalarProperty Name="ID_DOSAGEM" ColumnName="ID_DOSAGEM" />
+          <ScalarProperty Name="ID_CONSULTA" ColumnName="ID_CONSULTA" />
+          <ScalarProperty Name="ID_PRODUTO" ColumnName="ID_PRODUTO" />
+          <ScalarProperty Name="NOME_PACIENTE" ColumnName="NOME_PACIENTE" />
+          <ScalarProperty Name="NOME_RESPONSAVEL" ColumnName="NOME_RESPONSAVEL" />
+          <ScalarProperty Name="QUANTIDADE" ColumnName="QUANTIDADE" />
+          <ScalarProperty Name="PRODUTO" ColumnName="PRODUTO" />
+          <ScalarProperty Name="DESCRICAO" ColumnName="DESCRICAO" />
+          <ScalarProperty Name="DATA" ColumnName="DATA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FORMULARIOs">
+      <EntityTypeMapping TypeName="PIModel.FORMULARIO">
+        <MappingFragment StoreEntitySet="FORMULARIO">
+          <ScalarProperty Name="ID_FORMULARIO" ColumnName="ID_FORMULARIO" />
+          <ScalarProperty Name="PATOLODIA_DE_BASE" ColumnName="PATOLODIA_DE_BASE" />
+          <ScalarProperty Name="CIRURGIAS_ANTERIORES" ColumnName="CIRURGIAS_ANTERIORES" />
+          <ScalarProperty Name="TABAGISMO" ColumnName="TABAGISMO" />
+          <ScalarProperty Name="ETILISMO" ColumnName="ETILISMO" />
+          <ScalarProperty Name="HISTORICO_DE_ALERGIA" ColumnName="HISTORICO_DE_ALERGIA" />
+          <ScalarProperty Name="MEDICAMENTO_ATUAL" ColumnName="MEDICAMENTO_ATUAL" />
+          <ScalarProperty Name="PESO" ColumnName="PESO" />
+          <ScalarProperty Name="ALTURA" ColumnName="ALTURA" />
+          <ScalarProperty Name="IMC" ColumnName="IMC" />
+          <ScalarProperty Name="APITITE_USUAL" ColumnName="APITITE_USUAL" />
+          <ScalarProperty Name="PERDA_DE_PESO" ColumnName="PERDA_DE_PESO" />
+          <ScalarProperty Name="TURGO_DE_PELE" ColumnName="TURGO_DE_PELE" />
+          <ScalarProperty Name="ELIMINACAO_FEZES" ColumnName="ELIMINACAO_FEZES" />
+          <ScalarProperty Name="SONO_SATISFATORIO" ColumnName="SONO_SATISFATORIO" />
+          <ScalarProperty Name="USA_SONIFERO" ColumnName="USA_SONIFERO" />
+          <ScalarProperty Name="VIDA_SEXUAL" ColumnName="VIDA_SEXUAL" />
+          <ScalarProperty Name="FERIDA_INTERFERE" ColumnName="FERIDA_INTERFERE" />
+          <ScalarProperty Name="AJ_TOMAR_BANHO" ColumnName="AJ_TOMAR_BANHO" />
+          <ScalarProperty Name="AJ_VERTIRSE" ColumnName="AJ_VERTIRSE" />
+          <ScalarProperty Name="AJ_IR_BANHEIRO" ColumnName="AJ_IR_BANHEIRO" />
+          <ScalarProperty Name="AJ_SENTAR_LEVANTAR" ColumnName="AJ_SENTAR_LEVANTAR" />
+          <ScalarProperty Name="AJ_PREPARO_REFEICAO" ColumnName="AJ_PREPARO_REFEICAO" />
+          <ScalarProperty Name="AJ_TAREFA_DOMESTICA" ColumnName="AJ_TAREFA_DOMESTICA" />
+          <ScalarProperty Name="AJ_LAVAR_ROUPA" ColumnName="AJ_LAVAR_ROUPA" />
+          <ScalarProperty Name="AJ_DEAMBULAR" ColumnName="AJ_DEAMBULAR" />
+          <ScalarProperty Name="AJ_USO_MEIO_DE_TRANSPORTE" ColumnName="AJ_USO_MEIO_DE_TRANSPORTE" />
+          <ScalarProperty Name="FORCA_MOTORA" ColumnName="FORCA_MOTORA" />
+          <ScalarProperty Name="PARALISIA" ColumnName="PARALISIA" />
+          <ScalarProperty Name="PARESTESIA" ColumnName="PARESTESIA" />
+          <ScalarProperty Name="DEPEDENCIA_AUTOCUIDADO" ColumnName="DEPEDENCIA_AUTOCUIDADO" />
+          <ScalarProperty Name="HIGIENE_CORPORAL" ColumnName="HIGIENE_CORPORAL" />
+          <ScalarProperty Name="APR_MMII" ColumnName="APR_MMII" />
+          <ScalarProperty Name="APR_TRAUMA" ColumnName="APR_TRAUMA" />
+          <ScalarProperty Name="PQ_LESAO_PERNA_D" ColumnName="PQ_LESAO_PERNA_D" />
+          <ScalarProperty Name="PQ_LESA0_PERNA_E" ColumnName="PQ_LESA0_PERNA_E" />
+          <ScalarProperty Name="CONDICAO_PELE_UCERA" ColumnName="CONDICAO_PELE_UCERA" />
+          <ScalarProperty Name="CLASSIFICACAO_FERIDA" ColumnName="CLASSIFICACAO_FERIDA" />
+          <ScalarProperty Name="CARACTERISTICA_LESAO" ColumnName="CARACTERISTICA_LESAO" />
+          <ScalarProperty Name="ODOR" ColumnName="ODOR" />
+          <ScalarProperty Name="EXSUDATO" ColumnName="EXSUDATO" />
+          <ScalarProperty Name="GRANULACAO" ColumnName="GRANULACAO" />
+          <ScalarProperty Name="ESFACELO" ColumnName="ESFACELO" />
+          <ScalarProperty Name="ESCARA" ColumnName="ESCARA" />
+          <ScalarProperty Name="CONDICOES_BORDA" ColumnName="CONDICOES_BORDA" />
+          <ScalarProperty Name="TAMANHO_LESAO" ColumnName="TAMANHO_LESAO" />
+          <ScalarProperty Name="REGULACAO_TERMICA" ColumnName="REGULACAO_TERMICA" />
+          <ScalarProperty Name="REGULACAO_NEUROLOGICA" ColumnName="REGULACAO_NEUROLOGICA" />
+          <ScalarProperty Name="NIVEL_CONCIENCIA" ColumnName="NIVEL_CONCIENCIA" />
+          <ScalarProperty Name="REGULACAO_IMUNOLOGICA" ColumnName="REGULACAO_IMUNOLOGICA" />
+          <ScalarProperty Name="VACINACAO" ColumnName="VACINACAO" />
+          <ScalarProperty Name="PRECAO_ARTERIAL" ColumnName="PRECAO_ARTERIAL" />
+          <ScalarProperty Name="PRESENCA_EMATOMAS" ColumnName="PRESENCA_EMATOMAS" />
+          <ScalarProperty Name="EDEMA_MMII" ColumnName="EDEMA_MMII" />
+          <ScalarProperty Name="PULSO_PAPAVEIS" ColumnName="PULSO_PAPAVEIS" />
+          <ScalarProperty Name="PERCEPCAO_DOLOROSA" ColumnName="PERCEPCAO_DOLOROSA" />
+          <ScalarProperty Name="FATORES_DOR" ColumnName="FATORES_DOR" />
+          <ScalarProperty Name="FATORES_AUMETA_DOR" ColumnName="FATORES_AUMETA_DOR" />
+          <ScalarProperty Name="AGUA_TRATADA" ColumnName="AGUA_TRATADA" />
+          <ScalarProperty Name="COLETA_LIXO" ColumnName="COLETA_LIXO" />
+          <ScalarProperty Name="SENEAMENTO_BASICO" ColumnName="SENEAMENTO_BASICO" />
+          <ScalarProperty Name="ANIMAIS_DOMESTICO" ColumnName="ANIMAIS_DOMESTICO" />
+          <ScalarProperty Name="COBERTURA_PRIMARIAS" ColumnName="COBERTURA_PRIMARIAS" />
+          <ScalarProperty Name="CURATIVO_SOZINHO" ColumnName="CURATIVO_SOZINHO" />
+          <ScalarProperty Name="AUTOMEDITACAO" ColumnName="AUTOMEDITACAO" />
+          <ScalarProperty Name="CORBETURA_SEM_PRESCRICAO" ColumnName="CORBETURA_SEM_PRESCRICAO" />
+          <ScalarProperty Name="EXPLICAR_AP_UCERA" ColumnName="EXPLICAR_AP_UCERA" />
+          <ScalarProperty Name="SABE_COMO_PREVINIR_LESOES" ColumnName="SABE_COMO_PREVINIR_LESOES" />
+          <ScalarProperty Name="FOTORES_PRE_CICATRIZACAO" ColumnName="FOTORES_PRE_CICATRIZACAO" />
+          <ScalarProperty Name="SEN_TRITEZA" ColumnName="SEN_TRITEZA" />
+          <ScalarProperty Name="SEN_RAIVA" ColumnName="SEN_RAIVA" />
+          <ScalarProperty Name="SENT_ANSIEDADE" ColumnName="SENT_ANSIEDADE" />
+          <ScalarProperty Name="SENT_CONTRARIEDADE" ColumnName="SENT_CONTRARIEDADE" />
+          <ScalarProperty Name="SENT_TRAQUILIDADE" ColumnName="SENT_TRAQUILIDADE" />
+          <ScalarProperty Name="SENT_DESMOTIVACAO" ColumnName="SENT_DESMOTIVACAO" />
+          <ScalarProperty Name="VALORES_MSD" ColumnName="VALORES_MSD" />
+          <ScalarProperty Name="MSE" ColumnName="MSE" />
+          <ScalarProperty Name="MID" ColumnName="MID" />
+          <ScalarProperty Name="MIE" ColumnName="MIE" />
+          <ScalarProperty Name="CAL_ITB" ColumnName="CAL_ITB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PACIENTEs">
+      <EntityTypeMapping TypeName="PIModel.PACIENTE">
+        <MappingFragment StoreEntitySet="PACIENTE">
+          <ScalarProperty Name="ID_PACIENTE" ColumnName="ID_PACIENTE" />
+          <ScalarProperty Name="NOME" ColumnName="NOME" />
+          <ScalarProperty Name="SEXO" ColumnName="SEXO" />
+          <ScalarProperty Name="NASCIMENTO" ColumnName="NASCIMENTO" />
+          <ScalarProperty Name="EMDERECO" ColumnName="EMDERECO" />
+          <ScalarProperty Name="LOCOMOCAO" ColumnName="LOCOMOCAO" />
+          <ScalarProperty Name="RENDA_FAMILIAR" ColumnName="RENDA_FAMILIAR" />
+          <ScalarProperty Name="RELIGIAO" ColumnName="RELIGIAO" />
+          <ScalarProperty Name="FILHOS" ColumnName="FILHOS" />
+          <ScalarProperty Name="ESCOLARIDADE" ColumnName="ESCOLARIDADE" />
+          <ScalarProperty Name="PROFISSAO" ColumnName="PROFISSAO" />
+          <ScalarProperty Name="ESTADO_CIVIL" ColumnName="ESTADO_CIVIL" />
+          <ScalarProperty Name="TELEFONE" ColumnName="TELEFONE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PARTE_DIAGNOSTICO">
+      <EntityTypeMapping TypeName="PIModel.PARTE_DIAGNOSTICO">
+        <MappingFragment StoreEntitySet="PARTE_DIAGNOSTICO">
+          <ScalarProperty Name="ID_PARTE_DIAGNOSTICO" ColumnName="ID_PARTE_DIAGNOSTICO" />
+          <ScalarProperty Name="ID_DIAGNOSTICO" ColumnName="ID_DIAGNOSTICO" />
+          <ScalarProperty Name="ITEM_PARTE" ColumnName="ITEM_PARTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRESCRICAOs">
+      <EntityTypeMapping TypeName="PIModel.PRESCRICAO">
+        <MappingFragment StoreEntitySet="PRESCRICAO">
+          <ScalarProperty Name="ID_PRESCRICAO" ColumnName="ID_PRESCRICAO" />
+          <ScalarProperty Name="DETALHES" ColumnName="DETALHES" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRODUTOes">
+      <EntityTypeMapping TypeName="PIModel.PRODUTO">
+        <MappingFragment StoreEntitySet="PRODUTO">
+          <ScalarProperty Name="ID_PRODUTO" ColumnName="ID_PRODUTO" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="NOME" ColumnName="NOME" />
+          <ScalarProperty Name="QUANTIDADE" ColumnName="QUANTIDADE" />
+          <ScalarProperty Name="VALIDADE" ColumnName="VALIDADE" />
+          <ScalarProperty Name="DESCRICAO" ColumnName="DESCRICAO" />
+          <ScalarProperty Name="DATA_ENTRADA" ColumnName="DATA_ENTRADA" />
+          <ScalarProperty Name="DATA_SAIDA" ColumnName="DATA_SAIDA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RESULTADOes">
+      <EntityTypeMapping TypeName="PIModel.RESULTADO">
+        <MappingFragment StoreEntitySet="RESULTADO">
+          <ScalarProperty Name="ID_RESULTADO" ColumnName="ID_RESULTADO" />
+          <ScalarProperty Name="ID_DIAGNOSTICO" ColumnName="ID_DIAGNOSTICO" />
+          <ScalarProperty Name="ID_PRESCRICAO" ColumnName="ID_PRESCRICAO" />
+          <ScalarProperty Name="NOME_PACIENTE" ColumnName="NOME_PACIENTE" />
+          <ScalarProperty Name="NUMERO_ITEM" ColumnName="NUMERO_ITEM" />
+          <ScalarProperty Name="DESCRICAO" ColumnName="DESCRICAO" />
+          <ScalarProperty Name="DATA" ColumnName="DATA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIOs">
+      <EntityTypeMapping TypeName="PIModel.USUARIO">
+        <MappingFragment StoreEntitySet="USUARIO">
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="NOME" ColumnName="NOME" />
+          <ScalarProperty Name="SEXO" ColumnName="SEXO" />
+          <ScalarProperty Name="NASCIMENTO" ColumnName="NASCIMENTO" />
+          <ScalarProperty Name="ENDERECO" ColumnName="ENDERECO" />
+          <ScalarProperty Name="TELEFONE" ColumnName="TELEFONE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="DIAGNOSTICO_PARTES" TypeName="PIModel.DIAGNOSTICO_PARTES" StoreEntitySet="DIAGNOSTICO_PARTES">
+      <EndProperty Name="PARTE_DIAGNOSTICO">
+        <ScalarProperty Name="ID_PARTE_DIAGNOSTICO" ColumnName="ID_PARTE_DIAGNOSTICO" />
+      </EndProperty>
+      <EndProperty Name="PRESCRICAO">
+        <ScalarProperty Name="ID_PRESCRICAO" ColumnName="ID_PRESCRICAO" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

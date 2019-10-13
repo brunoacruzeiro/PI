@@ -1,0 +1,50 @@
+C:\Users\danie\OneDrive\Área de Trabalho\PI\PI\PI\bin\Debug\PI.exe.config
+C:\Users\danie\OneDrive\Área de Trabalho\PI\PI\PI\bin\Debug\PI.exe
+C:\Users\danie\OneDrive\Área de Trabalho\PI\PI\PI\bin\Debug\PI.pdb
+C:\Users\danie\OneDrive\Área de Trabalho\PI\PI\PI\bin\Debug\EntityFramework.dll
+C:\Users\danie\OneDrive\Área de Trabalho\PI\PI\PI\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\danie\OneDrive\Área de Trabalho\PI\PI\PI\bin\Debug\EntityFramework.xml
+C:\Users\danie\OneDrive\Área de Trabalho\PI\PI\PI\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\danie\OneDrive\Área de Trabalho\PI\PI\PI\obj\Debug\PI.csprojAssemblyReference.cache
+C:\Users\danie\OneDrive\Área de Trabalho\PI\PI\PI\obj\Debug\MainWindow.g.cs
+C:\Users\danie\OneDrive\Área de Trabalho\PI\PI\PI\obj\Debug\Paciente.g.cs
+C:\Users\danie\OneDrive\Área de Trabalho\PI\PI\PI\obj\Debug\App.g.cs
+C:\Users\danie\OneDrive\Área de Trabalho\PI\PI\PI\obj\Debug\PI_Content.g.cs
+C:\Users\danie\OneDrive\Área de Trabalho\PI\PI\PI\obj\Debug\PI_MarkupCompile.cache
+C:\Users\danie\OneDrive\Área de Trabalho\PI\PI\PI\obj\Debug\PI_MarkupCompile.lref
+C:\Users\danie\OneDrive\Área de Trabalho\PI\PI\PI\obj\Debug\MainWindow.baml
+C:\Users\danie\OneDrive\Área de Trabalho\PI\PI\PI\obj\Debug\Paciente.baml
+C:\Users\danie\OneDrive\Área de Trabalho\PI\PI\PI\obj\Debug\PI.g.resources
+C:\Users\danie\OneDrive\Área de Trabalho\PI\PI\PI\obj\Debug\PI.Properties.Resources.resources
+C:\Users\danie\OneDrive\Área de Trabalho\PI\PI\PI\obj\Debug\PI.csproj.GenerateResource.cache
+C:\Users\danie\OneDrive\Área de Trabalho\PI\PI\PI\obj\Debug\PI.csproj.CopyComplete
+C:\Users\danie\OneDrive\Área de Trabalho\PI\PI\PI\obj\Debug\PI.exe
+C:\Users\danie\OneDrive\Área de Trabalho\PI\PI\PI\obj\Debug\PI.pdb
+C:\Users\danie\OneDrive\Área de Trabalho\PI\PI\PI\obj\Debug\Usuario.g.cs
+C:\Users\danie\OneDrive\Área de Trabalho\PI\PI\PI\obj\Debug\Usuario.baml
+C:\Users\danie\OneDrive\Área de Trabalho\PI - BACKUP\PI\PI\bin\Debug\PI.exe.config
+C:\Users\danie\OneDrive\Área de Trabalho\PI - BACKUP\PI\PI\bin\Debug\PI.exe
+C:\Users\danie\OneDrive\Área de Trabalho\PI - BACKUP\PI\PI\bin\Debug\PI.pdb
+C:\Users\danie\OneDrive\Área de Trabalho\PI - BACKUP\PI\PI\bin\Debug\EntityFramework.dll
+C:\Users\danie\OneDrive\Área de Trabalho\PI - BACKUP\PI\PI\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\danie\OneDrive\Área de Trabalho\PI - BACKUP\PI\PI\bin\Debug\EntityFramework.xml
+C:\Users\danie\OneDrive\Área de Trabalho\PI - BACKUP\PI\PI\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\danie\OneDrive\Área de Trabalho\PI - BACKUP\PI\PI\obj\Debug\PI.csprojAssemblyReference.cache
+C:\Users\danie\OneDrive\Área de Trabalho\PI - BACKUP\PI\PI\obj\Debug\Diagnostico.g.cs
+C:\Users\danie\OneDrive\Área de Trabalho\PI - BACKUP\PI\PI\obj\Debug\MainWindow.g.cs
+C:\Users\danie\OneDrive\Área de Trabalho\PI - BACKUP\PI\PI\obj\Debug\Paciente.g.cs
+C:\Users\danie\OneDrive\Área de Trabalho\PI - BACKUP\PI\PI\obj\Debug\Usuario.g.cs
+C:\Users\danie\OneDrive\Área de Trabalho\PI - BACKUP\PI\PI\obj\Debug\App.g.cs
+C:\Users\danie\OneDrive\Área de Trabalho\PI - BACKUP\PI\PI\obj\Debug\PI_Content.g.cs
+C:\Users\danie\OneDrive\Área de Trabalho\PI - BACKUP\PI\PI\obj\Debug\PI_MarkupCompile.cache
+C:\Users\danie\OneDrive\Área de Trabalho\PI - BACKUP\PI\PI\obj\Debug\PI_MarkupCompile.lref
+C:\Users\danie\OneDrive\Área de Trabalho\PI - BACKUP\PI\PI\obj\Debug\Diagnostico.baml
+C:\Users\danie\OneDrive\Área de Trabalho\PI - BACKUP\PI\PI\obj\Debug\MainWindow.baml
+C:\Users\danie\OneDrive\Área de Trabalho\PI - BACKUP\PI\PI\obj\Debug\Paciente.baml
+C:\Users\danie\OneDrive\Área de Trabalho\PI - BACKUP\PI\PI\obj\Debug\Usuario.baml
+C:\Users\danie\OneDrive\Área de Trabalho\PI - BACKUP\PI\PI\obj\Debug\PI.g.resources
+C:\Users\danie\OneDrive\Área de Trabalho\PI - BACKUP\PI\PI\obj\Debug\PI.Properties.Resources.resources
+C:\Users\danie\OneDrive\Área de Trabalho\PI - BACKUP\PI\PI\obj\Debug\PI.csproj.GenerateResource.cache
+C:\Users\danie\OneDrive\Área de Trabalho\PI - BACKUP\PI\PI\obj\Debug\PI.csproj.CopyComplete
+C:\Users\danie\OneDrive\Área de Trabalho\PI - BACKUP\PI\PI\obj\Debug\PI.exe
+C:\Users\danie\OneDrive\Área de Trabalho\PI - BACKUP\PI\PI\obj\Debug\PI.pdb

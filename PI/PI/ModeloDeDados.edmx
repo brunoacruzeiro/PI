@@ -1,0 +1,1008 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PIModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CONSULTA">
+          <Key>
+            <PropertyRef Name="ID_CONSULTA" />
+          </Key>
+          <Property Name="ID_CONSULTA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_FORMULARIO" Type="int" Nullable="false" />
+          <Property Name="ID_PACIENTE" Type="int" Nullable="false" />
+          <Property Name="NOME_PACIENTE" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="NOME_RESPONSAVEL" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="DATA_CONSULTA" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DIAGNOSTICO">
+          <Key>
+            <PropertyRef Name="ID_DIAGNOSTICO" />
+          </Key>
+          <Property Name="ID_DIAGNOSTICO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_CONSULTA" Type="int" Nullable="false" />
+          <Property Name="DATA_DIAGNOSTICO" Type="datetime" Nullable="false" />
+          <Property Name="NOME_PACIENTE" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="NUMERO_ITEM" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DIAGNOSTICO_PARTES">
+          <Key>
+            <PropertyRef Name="ID_PRESCRICAO" />
+            <PropertyRef Name="ID_PARTE_DIAGNOSTICO" />
+          </Key>
+          <Property Name="ID_PRESCRICAO" Type="int" Nullable="false" />
+          <Property Name="ID_PARTE_DIAGNOSTICO" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DOSAGEM">
+          <Key>
+            <PropertyRef Name="ID_DOSAGEM" />
+          </Key>
+          <Property Name="ID_DOSAGEM" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_CONSULTA" Type="int" Nullable="false" />
+          <Property Name="ID_PRODUTO" Type="int" Nullable="false" />
+          <Property Name="NOME_PACIENTE" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="NOME_RESPONSAVEL" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="QUANTIDADE" Type="int" Nullable="false" />
+          <Property Name="PRODUTO" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="DESCRICAO" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="DATA" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FORMULARIO">
+          <Key>
+            <PropertyRef Name="ID_FORMULARIO" />
+          </Key>
+          <Property Name="ID_FORMULARIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PATOLODIA_DE_BASE" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="CIRURGIAS_ANTERIORES" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="TABAGISMO" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="ETILISMO" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="HISTORICO_DE_ALERGIA" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="MEDICAMENTO_ATUAL" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="PESO" Type="float" Nullable="false" />
+          <Property Name="ALTURA" Type="float" Nullable="false" />
+          <Property Name="IMC" Type="float" Nullable="false" />
+          <Property Name="APITITE_USUAL" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="PERDA_DE_PESO" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="TURGO_DE_PELE" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="ELIMINACAO_FEZES" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="SONO_SATISFATORIO" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="USA_SONIFERO" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="VIDA_SEXUAL" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="FERIDA_INTERFERE" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="AJ_TOMAR_BANHO" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="AJ_VERTIRSE" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="AJ_IR_BANHEIRO" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="AJ_SENTAR_LEVANTAR" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="AJ_PREPARO_REFEICAO" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="AJ_TAREFA_DOMESTICA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="AJ_LAVAR_ROUPA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="AJ_DEAMBULAR" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="AJ_USO_MEIO_DE_TRANSPORTE" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="FORCA_MOTORA" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="PARALISIA" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="PARESTESIA" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="DEPEDENCIA_AUTOCUIDADO" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="HIGIENE_CORPORAL" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="APR_MMII" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="APR_TRAUMA" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="PQ_LESAO_PERNA_D" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="PQ_LESA0_PERNA_E" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="CONDICAO_PELE_UCERA" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="CLASSIFICACAO_FERIDA" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="CARACTERISTICA_LESAO" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="ODOR" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="EXSUDATO" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="GRANULACAO" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="ESFACELO" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="ESCARA" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="CONDICOES_BORDA" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="TAMANHO_LESAO" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="REGULACAO_TERMICA" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="REGULACAO_NEUROLOGICA" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="NIVEL_CONCIENCIA" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="REGULACAO_IMUNOLOGICA" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="VACINACAO" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="PRECAO_ARTERIAL" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="PRESENCA_EMATOMAS" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="EDEMA_MMII" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="PULSO_PAPAVEIS" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="PERCEPCAO_DOLOROSA" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="FATORES_DOR" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="FATORES_AUMETA_DOR" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="AGUA_TRATADA" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="COLETA_LIXO" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="SENEAMENTO_BASICO" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="ANIMAIS_DOMESTICO" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="COBERTURA_PRIMARIAS" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="CURATIVO_SOZINHO" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="AUTOMEDITACAO" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="CORBETURA_SEM_PRESCRICAO" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="EXPLICAR_AP_UCERA" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="SABE_COMO_PREVINIR_LESOES" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="FOTORES_PRE_CICATRIZACAO" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="SEN_TRITEZA" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="SEN_RAIVA" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="SENT_ANSIEDADE" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="SENT_CONTRARIEDADE" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="SENT_TRAQUILIDADE" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="SENT_DESMOTIVACAO" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="VALORES_MSD" Type="int" Nullable="false" />
+          <Property Name="MSE" Type="int" Nullable="false" />
+          <Property Name="MID" Type="int" Nullable="false" />
+          <Property Name="MIE" Type="int" Nullable="false" />
+          <Property Name="CAL_ITB" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PACIENTE">
+          <Key>
+            <PropertyRef Name="ID_PACIENTE" />
+          </Key>
+          <Property Name="ID_PACIENTE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NOME" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="SEXO" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="NASCIMENTO" Type="datetime" Nullable="false" />
+          <Property Name="EMDERECO" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="LOCOMOCAO" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="RENDA_FAMILIAR" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="RELIGIAO" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="FILHOS" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="ESCOLARIDADE" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="PROFISSAO" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="ESTADO_CIVIL" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="TELEFONE" Type="varchar" MaxLength="12" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PARTE_DIAGNOSTICO">
+          <Key>
+            <PropertyRef Name="ID_PARTE_DIAGNOSTICO" />
+          </Key>
+          <Property Name="ID_PARTE_DIAGNOSTICO" Type="int" Nullable="false" />
+          <Property Name="ID_DIAGNOSTICO" Type="int" Nullable="false" />
+          <Property Name="ITEM_PARTE" Type="varchar" MaxLength="60" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PRESCRICAO">
+          <Key>
+            <PropertyRef Name="ID_PRESCRICAO" />
+          </Key>
+          <Property Name="ID_PRESCRICAO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DETALHES" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PRODUTO">
+          <Key>
+            <PropertyRef Name="ID_PRODUTO" />
+          </Key>
+          <Property Name="ID_PRODUTO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_USUARIO" Type="int" Nullable="false" />
+          <Property Name="NOME" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="QUANTIDADE" Type="int" Nullable="false" />
+          <Property Name="VALIDADE" Type="datetime" Nullable="false" />
+          <Property Name="DESCRICAO" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="DATA_ENTRADA" Type="datetime" Nullable="false" />
+          <Property Name="DATA_SAIDA" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RESULTADO">
+          <Key>
+            <PropertyRef Name="ID_RESULTADO" />
+          </Key>
+          <Property Name="ID_RESULTADO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_DIAGNOSTICO" Type="int" Nullable="false" />
+          <Property Name="ID_PRESCRICAO" Type="int" Nullable="false" />
+          <Property Name="NOME_PACIENTE" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="NUMERO_ITEM" Type="int" Nullable="false" />
+          <Property Name="DESCRICAO" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="DATA" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="USUARIO">
+          <Key>
+            <PropertyRef Name="ID_USUARIO" />
+          </Key>
+          <Property Name="ID_USUARIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NOME" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="SEXO" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="NASCIMENTO" Type="datetime" Nullable="false" />
+          <Property Name="ENDERECO" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="TELEFONE" Type="varchar" MaxLength="12" Nullable="false" />
+        </EntityType>
+        <Association Name="CONSULTA_DIAGNOSTICO_fk">
+          <End Role="CONSULTA" Type="Self.CONSULTA" Multiplicity="1" />
+          <End Role="DIAGNOSTICO" Type="Self.DIAGNOSTICO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CONSULTA">
+              <PropertyRef Name="ID_CONSULTA" />
+            </Principal>
+            <Dependent Role="DIAGNOSTICO">
+              <PropertyRef Name="ID_CONSULTA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="CONSULTA_DOSAGEM_fk">
+          <End Role="CONSULTA" Type="Self.CONSULTA" Multiplicity="1" />
+          <End Role="DOSAGEM" Type="Self.DOSAGEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CONSULTA">
+              <PropertyRef Name="ID_CONSULTA" />
+            </Principal>
+            <Dependent Role="DOSAGEM">
+              <PropertyRef Name="ID_CONSULTA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="DIAGNOSTICO_PARTE_DIAGNOSTICO_fk">
+          <End Role="DIAGNOSTICO" Type="Self.DIAGNOSTICO" Multiplicity="1" />
+          <End Role="PARTE_DIAGNOSTICO" Type="Self.PARTE_DIAGNOSTICO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DIAGNOSTICO">
+              <PropertyRef Name="ID_DIAGNOSTICO" />
+            </Principal>
+            <Dependent Role="PARTE_DIAGNOSTICO">
+              <PropertyRef Name="ID_DIAGNOSTICO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="DIAGNOSTICO_RESULTADO_fk">
+          <End Role="DIAGNOSTICO" Type="Self.DIAGNOSTICO" Multiplicity="1" />
+          <End Role="RESULTADO" Type="Self.RESULTADO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DIAGNOSTICO">
+              <PropertyRef Name="ID_DIAGNOSTICO" />
+            </Principal>
+            <Dependent Role="RESULTADO">
+              <PropertyRef Name="ID_DIAGNOSTICO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FORMULARIO_CONSULTA_fk">
+          <End Role="FORMULARIO" Type="Self.FORMULARIO" Multiplicity="1" />
+          <End Role="CONSULTA" Type="Self.CONSULTA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FORMULARIO">
+              <PropertyRef Name="ID_FORMULARIO" />
+            </Principal>
+            <Dependent Role="CONSULTA">
+              <PropertyRef Name="ID_FORMULARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PACIENTE_CONSULTA_fk">
+          <End Role="PACIENTE" Type="Self.PACIENTE" Multiplicity="1" />
+          <End Role="CONSULTA" Type="Self.CONSULTA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PACIENTE">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Principal>
+            <Dependent Role="CONSULTA">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PARTE_DIAGNOSTICO_DIAGNOSTICO_PARTES_fk">
+          <End Role="PARTE_DIAGNOSTICO" Type="Self.PARTE_DIAGNOSTICO" Multiplicity="1" />
+          <End Role="DIAGNOSTICO_PARTES" Type="Self.DIAGNOSTICO_PARTES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PARTE_DIAGNOSTICO">
+              <PropertyRef Name="ID_PARTE_DIAGNOSTICO" />
+            </Principal>
+            <Dependent Role="DIAGNOSTICO_PARTES">
+              <PropertyRef Name="ID_PARTE_DIAGNOSTICO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PRESCRICAO_DIAGNOSTICO_PARTES_fk">
+          <End Role="PRESCRICAO" Type="Self.PRESCRICAO" Multiplicity="1" />
+          <End Role="DIAGNOSTICO_PARTES" Type="Self.DIAGNOSTICO_PARTES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRESCRICAO">
+              <PropertyRef Name="ID_PRESCRICAO" />
+            </Principal>
+            <Dependent Role="DIAGNOSTICO_PARTES">
+              <PropertyRef Name="ID_PRESCRICAO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PRESCRICAO_RESULTADO_fk">
+          <End Role="PRESCRICAO" Type="Self.PRESCRICAO" Multiplicity="1" />
+          <End Role="RESULTADO" Type="Self.RESULTADO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRESCRICAO">
+              <PropertyRef Name="ID_PRESCRICAO" />
+            </Principal>
+            <Dependent Role="RESULTADO">
+              <PropertyRef Name="ID_PRESCRICAO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PRODUTO_DOSAGEM_fk">
+          <End Role="PRODUTO" Type="Self.PRODUTO" Multiplicity="1" />
+          <End Role="DOSAGEM" Type="Self.DOSAGEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRODUTO">
+              <PropertyRef Name="ID_PRODUTO" />
+            </Principal>
+            <Dependent Role="DOSAGEM">
+              <PropertyRef Name="ID_PRODUTO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="USUARIO_PRODUTO_fk">
+          <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="1" />
+          <End Role="PRODUTO" Type="Self.PRODUTO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USUARIO">
+              <PropertyRef Name="ID_USUARIO" />
+            </Principal>
+            <Dependent Role="PRODUTO">
+              <PropertyRef Name="ID_USUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PIModelStoreContainer">
+          <EntitySet Name="CONSULTA" EntityType="Self.CONSULTA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DIAGNOSTICO" EntityType="Self.DIAGNOSTICO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DIAGNOSTICO_PARTES" EntityType="Self.DIAGNOSTICO_PARTES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DOSAGEM" EntityType="Self.DOSAGEM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FORMULARIO" EntityType="Self.FORMULARIO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PACIENTE" EntityType="Self.PACIENTE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PARTE_DIAGNOSTICO" EntityType="Self.PARTE_DIAGNOSTICO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PRESCRICAO" EntityType="Self.PRESCRICAO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PRODUTO" EntityType="Self.PRODUTO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RESULTADO" EntityType="Self.RESULTADO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="USUARIO" EntityType="Self.USUARIO" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="CONSULTA_DIAGNOSTICO_fk" Association="Self.CONSULTA_DIAGNOSTICO_fk">
+            <End Role="CONSULTA" EntitySet="CONSULTA" />
+            <End Role="DIAGNOSTICO" EntitySet="DIAGNOSTICO" />
+          </AssociationSet>
+          <AssociationSet Name="CONSULTA_DOSAGEM_fk" Association="Self.CONSULTA_DOSAGEM_fk">
+            <End Role="CONSULTA" EntitySet="CONSULTA" />
+            <End Role="DOSAGEM" EntitySet="DOSAGEM" />
+          </AssociationSet>
+          <AssociationSet Name="DIAGNOSTICO_PARTE_DIAGNOSTICO_fk" Association="Self.DIAGNOSTICO_PARTE_DIAGNOSTICO_fk">
+            <End Role="DIAGNOSTICO" EntitySet="DIAGNOSTICO" />
+            <End Role="PARTE_DIAGNOSTICO" EntitySet="PARTE_DIAGNOSTICO" />
+          </AssociationSet>
+          <AssociationSet Name="DIAGNOSTICO_RESULTADO_fk" Association="Self.DIAGNOSTICO_RESULTADO_fk">
+            <End Role="DIAGNOSTICO" EntitySet="DIAGNOSTICO" />
+            <End Role="RESULTADO" EntitySet="RESULTADO" />
+          </AssociationSet>
+          <AssociationSet Name="FORMULARIO_CONSULTA_fk" Association="Self.FORMULARIO_CONSULTA_fk">
+            <End Role="FORMULARIO" EntitySet="FORMULARIO" />
+            <End Role="CONSULTA" EntitySet="CONSULTA" />
+          </AssociationSet>
+          <AssociationSet Name="PACIENTE_CONSULTA_fk" Association="Self.PACIENTE_CONSULTA_fk">
+            <End Role="PACIENTE" EntitySet="PACIENTE" />
+            <End Role="CONSULTA" EntitySet="CONSULTA" />
+          </AssociationSet>
+          <AssociationSet Name="PARTE_DIAGNOSTICO_DIAGNOSTICO_PARTES_fk" Association="Self.PARTE_DIAGNOSTICO_DIAGNOSTICO_PARTES_fk">
+            <End Role="PARTE_DIAGNOSTICO" EntitySet="PARTE_DIAGNOSTICO" />
+            <End Role="DIAGNOSTICO_PARTES" EntitySet="DIAGNOSTICO_PARTES" />
+          </AssociationSet>
+          <AssociationSet Name="PRESCRICAO_DIAGNOSTICO_PARTES_fk" Association="Self.PRESCRICAO_DIAGNOSTICO_PARTES_fk">
+            <End Role="PRESCRICAO" EntitySet="PRESCRICAO" />
+            <End Role="DIAGNOSTICO_PARTES" EntitySet="DIAGNOSTICO_PARTES" />
+          </AssociationSet>
+          <AssociationSet Name="PRESCRICAO_RESULTADO_fk" Association="Self.PRESCRICAO_RESULTADO_fk">
+            <End Role="PRESCRICAO" EntitySet="PRESCRICAO" />
+            <End Role="RESULTADO" EntitySet="RESULTADO" />
+          </AssociationSet>
+          <AssociationSet Name="PRODUTO_DOSAGEM_fk" Association="Self.PRODUTO_DOSAGEM_fk">
+            <End Role="PRODUTO" EntitySet="PRODUTO" />
+            <End Role="DOSAGEM" EntitySet="DOSAGEM" />
+          </AssociationSet>
+          <AssociationSet Name="USUARIO_PRODUTO_fk" Association="Self.USUARIO_PRODUTO_fk">
+            <End Role="USUARIO" EntitySet="USUARIO" />
+            <End Role="PRODUTO" EntitySet="PRODUTO" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PIModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CONSULTA">
+          <Key>
+            <PropertyRef Name="ID_CONSULTA" />
+          </Key>
+          <Property Name="ID_CONSULTA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_FORMULARIO" Type="Int32" Nullable="false" />
+          <Property Name="ID_PACIENTE" Type="Int32" Nullable="false" />
+          <Property Name="NOME_PACIENTE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NOME_RESPONSAVEL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DATA_CONSULTA" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="DIAGNOSTICOes" Relationship="Self.CONSULTA_DIAGNOSTICO_fk" FromRole="CONSULTA" ToRole="DIAGNOSTICO" />
+          <NavigationProperty Name="DOSAGEMs" Relationship="Self.CONSULTA_DOSAGEM_fk" FromRole="CONSULTA" ToRole="DOSAGEM" />
+          <NavigationProperty Name="FORMULARIO" Relationship="Self.FORMULARIO_CONSULTA_fk" FromRole="CONSULTA" ToRole="FORMULARIO" />
+          <NavigationProperty Name="PACIENTE" Relationship="Self.PACIENTE_CONSULTA_fk" FromRole="CONSULTA" ToRole="PACIENTE" />
+        </EntityType>
+        <EntityType Name="DIAGNOSTICO">
+          <Key>
+            <PropertyRef Name="ID_DIAGNOSTICO" />
+          </Key>
+          <Property Name="ID_DIAGNOSTICO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_CONSULTA" Type="Int32" Nullable="false" />
+          <Property Name="DATA_DIAGNOSTICO" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="NOME_PACIENTE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NUMERO_ITEM" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CONSULTA" Relationship="Self.CONSULTA_DIAGNOSTICO_fk" FromRole="DIAGNOSTICO" ToRole="CONSULTA" />
+          <NavigationProperty Name="PARTE_DIAGNOSTICO" Relationship="Self.DIAGNOSTICO_PARTE_DIAGNOSTICO_fk" FromRole="DIAGNOSTICO" ToRole="PARTE_DIAGNOSTICO" />
+          <NavigationProperty Name="RESULTADOes" Relationship="Self.DIAGNOSTICO_RESULTADO_fk" FromRole="DIAGNOSTICO" ToRole="RESULTADO" />
+        </EntityType>
+        <EntityType Name="DOSAGEM">
+          <Key>
+            <PropertyRef Name="ID_DOSAGEM" />
+          </Key>
+          <Property Name="ID_DOSAGEM" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_CONSULTA" Type="Int32" Nullable="false" />
+          <Property Name="ID_PRODUTO" Type="Int32" Nullable="false" />
+          <Property Name="NOME_PACIENTE" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NOME_RESPONSAVEL" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="QUANTIDADE" Type="Int32" Nullable="false" />
+          <Property Name="PRODUTO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DESCRICAO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DATA" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="CONSULTA" Relationship="Self.CONSULTA_DOSAGEM_fk" FromRole="DOSAGEM" ToRole="CONSULTA" />
+          <NavigationProperty Name="PRODUTO1" Relationship="Self.PRODUTO_DOSAGEM_fk" FromRole="DOSAGEM" ToRole="PRODUTO" />
+        </EntityType>
+        <EntityType Name="FORMULARIO">
+          <Key>
+            <PropertyRef Name="ID_FORMULARIO" />
+          </Key>
+          <Property Name="ID_FORMULARIO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PATOLODIA_DE_BASE" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CIRURGIAS_ANTERIORES" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TABAGISMO" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ETILISMO" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HISTORICO_DE_ALERGIA" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MEDICAMENTO_ATUAL" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PESO" Type="Double" Nullable="false" />
+          <Property Name="ALTURA" Type="Double" Nullable="false" />
+          <Property Name="IMC" Type="Double" Nullable="false" />
+          <Property Name="APITITE_USUAL" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PERDA_DE_PESO" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TURGO_DE_PELE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ELIMINACAO_FEZES" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SONO_SATISFATORIO" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="USA_SONIFERO" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="VIDA_SEXUAL" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FERIDA_INTERFERE" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AJ_TOMAR_BANHO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AJ_VERTIRSE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AJ_IR_BANHEIRO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AJ_SENTAR_LEVANTAR" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AJ_PREPARO_REFEICAO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AJ_TAREFA_DOMESTICA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AJ_LAVAR_ROUPA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AJ_DEAMBULAR" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AJ_USO_MEIO_DE_TRANSPORTE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FORCA_MOTORA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PARALISIA" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PARESTESIA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DEPEDENCIA_AUTOCUIDADO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HIGIENE_CORPORAL" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="APR_MMII" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="APR_TRAUMA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PQ_LESAO_PERNA_D" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PQ_LESA0_PERNA_E" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CONDICAO_PELE_UCERA" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CLASSIFICACAO_FERIDA" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CARACTERISTICA_LESAO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ODOR" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EXSUDATO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GRANULACAO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ESFACELO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ESCARA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CONDICOES_BORDA" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TAMANHO_LESAO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="REGULACAO_TERMICA" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="REGULACAO_NEUROLOGICA" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NIVEL_CONCIENCIA" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="REGULACAO_IMUNOLOGICA" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="VACINACAO" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PRECAO_ARTERIAL" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PRESENCA_EMATOMAS" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EDEMA_MMII" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PULSO_PAPAVEIS" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PERCEPCAO_DOLOROSA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FATORES_DOR" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FATORES_AUMETA_DOR" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AGUA_TRATADA" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="COLETA_LIXO" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SENEAMENTO_BASICO" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ANIMAIS_DOMESTICO" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="COBERTURA_PRIMARIAS" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CURATIVO_SOZINHO" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AUTOMEDITACAO" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CORBETURA_SEM_PRESCRICAO" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EXPLICAR_AP_UCERA" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SABE_COMO_PREVINIR_LESOES" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FOTORES_PRE_CICATRIZACAO" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SEN_TRITEZA" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SEN_RAIVA" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SENT_ANSIEDADE" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SENT_CONTRARIEDADE" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SENT_TRAQUILIDADE" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SENT_DESMOTIVACAO" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="VALORES_MSD" Type="Int32" Nullable="false" />
+          <Property Name="MSE" Type="Int32" Nullable="false" />
+          <Property Name="MID" Type="Int32" Nullable="false" />
+          <Property Name="MIE" Type="Int32" Nullable="false" />
+          <Property Name="CAL_ITB" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CONSULTAs" Relationship="Self.FORMULARIO_CONSULTA_fk" FromRole="FORMULARIO" ToRole="CONSULTA" />
+        </EntityType>
+        <EntityType Name="PACIENTE">
+          <Key>
+            <PropertyRef Name="ID_PACIENTE" />
+          </Key>
+          <Property Name="ID_PACIENTE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOME" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SEXO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="NASCIMENTO" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EMDERECO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LOCOMOCAO" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RENDA_FAMILIAR" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RELIGIAO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FILHOS" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ESCOLARIDADE" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PROFISSAO" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ESTADO_CIVIL" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TELEFONE" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="CONSULTAs" Relationship="Self.PACIENTE_CONSULTA_fk" FromRole="PACIENTE" ToRole="CONSULTA" />
+        </EntityType>
+        <EntityType Name="PARTE_DIAGNOSTICO">
+          <Key>
+            <PropertyRef Name="ID_PARTE_DIAGNOSTICO" />
+          </Key>
+          <Property Name="ID_PARTE_DIAGNOSTICO" Type="Int32" Nullable="false" />
+          <Property Name="ID_DIAGNOSTICO" Type="Int32" Nullable="false" />
+          <Property Name="ITEM_PARTE" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="DIAGNOSTICO" Relationship="Self.DIAGNOSTICO_PARTE_DIAGNOSTICO_fk" FromRole="PARTE_DIAGNOSTICO" ToRole="DIAGNOSTICO" />
+          <NavigationProperty Name="PRESCRICAOs" Relationship="Self.DIAGNOSTICO_PARTES" FromRole="PARTE_DIAGNOSTICO" ToRole="PRESCRICAO" />
+        </EntityType>
+        <EntityType Name="PRESCRICAO">
+          <Key>
+            <PropertyRef Name="ID_PRESCRICAO" />
+          </Key>
+          <Property Name="ID_PRESCRICAO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DETALHES" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="RESULTADOes" Relationship="Self.PRESCRICAO_RESULTADO_fk" FromRole="PRESCRICAO" ToRole="RESULTADO" />
+          <NavigationProperty Name="PARTE_DIAGNOSTICO" Relationship="Self.DIAGNOSTICO_PARTES" FromRole="PRESCRICAO" ToRole="PARTE_DIAGNOSTICO" />
+        </EntityType>
+        <EntityType Name="PRODUTO">
+          <Key>
+            <PropertyRef Name="ID_PRODUTO" />
+          </Key>
+          <Property Name="ID_PRODUTO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_USUARIO" Type="Int32" Nullable="false" />
+          <Property Name="NOME" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="QUANTIDADE" Type="Int32" Nullable="false" />
+          <Property Name="VALIDADE" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DESCRICAO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DATA_ENTRADA" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DATA_SAIDA" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="DOSAGEMs" Relationship="Self.PRODUTO_DOSAGEM_fk" FromRole="PRODUTO" ToRole="DOSAGEM" />
+          <NavigationProperty Name="USUARIO" Relationship="Self.USUARIO_PRODUTO_fk" FromRole="PRODUTO" ToRole="USUARIO" />
+        </EntityType>
+        <EntityType Name="RESULTADO">
+          <Key>
+            <PropertyRef Name="ID_RESULTADO" />
+          </Key>
+          <Property Name="ID_RESULTADO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_DIAGNOSTICO" Type="Int32" Nullable="false" />
+          <Property Name="ID_PRESCRICAO" Type="Int32" Nullable="false" />
+          <Property Name="NOME_PACIENTE" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NUMERO_ITEM" Type="Int32" Nullable="false" />
+          <Property Name="DESCRICAO" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DATA" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="DIAGNOSTICO" Relationship="Self.DIAGNOSTICO_RESULTADO_fk" FromRole="RESULTADO" ToRole="DIAGNOSTICO" />
+          <NavigationProperty Name="PRESCRICAO" Relationship="Self.PRESCRICAO_RESULTADO_fk" FromRole="RESULTADO" ToRole="PRESCRICAO" />
+        </EntityType>
+        <EntityType Name="USUARIO">
+          <Key>
+            <PropertyRef Name="ID_USUARIO" />
+          </Key>
+          <Property Name="ID_USUARIO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOME" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SEXO" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NASCIMENTO" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ENDERECO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TELEFONE" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="PRODUTOes" Relationship="Self.USUARIO_PRODUTO_fk" FromRole="USUARIO" ToRole="PRODUTO" />
+        </EntityType>
+        <Association Name="CONSULTA_DIAGNOSTICO_fk">
+          <End Role="CONSULTA" Type="Self.CONSULTA" Multiplicity="1" />
+          <End Role="DIAGNOSTICO" Type="Self.DIAGNOSTICO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CONSULTA">
+              <PropertyRef Name="ID_CONSULTA" />
+            </Principal>
+            <Dependent Role="DIAGNOSTICO">
+              <PropertyRef Name="ID_CONSULTA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="CONSULTA_DOSAGEM_fk">
+          <End Role="CONSULTA" Type="Self.CONSULTA" Multiplicity="1" />
+          <End Role="DOSAGEM" Type="Self.DOSAGEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CONSULTA">
+              <PropertyRef Name="ID_CONSULTA" />
+            </Principal>
+            <Dependent Role="DOSAGEM">
+              <PropertyRef Name="ID_CONSULTA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FORMULARIO_CONSULTA_fk">
+          <End Role="FORMULARIO" Type="Self.FORMULARIO" Multiplicity="1" />
+          <End Role="CONSULTA" Type="Self.CONSULTA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FORMULARIO">
+              <PropertyRef Name="ID_FORMULARIO" />
+            </Principal>
+            <Dependent Role="CONSULTA">
+              <PropertyRef Name="ID_FORMULARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PACIENTE_CONSULTA_fk">
+          <End Role="PACIENTE" Type="Self.PACIENTE" Multiplicity="1" />
+          <End Role="CONSULTA" Type="Self.CONSULTA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PACIENTE">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Principal>
+            <Dependent Role="CONSULTA">
+              <PropertyRef Name="ID_PACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="DIAGNOSTICO_PARTE_DIAGNOSTICO_fk">
+          <End Role="DIAGNOSTICO" Type="Self.DIAGNOSTICO" Multiplicity="1" />
+          <End Role="PARTE_DIAGNOSTICO" Type="Self.PARTE_DIAGNOSTICO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DIAGNOSTICO">
+              <PropertyRef Name="ID_DIAGNOSTICO" />
+            </Principal>
+            <Dependent Role="PARTE_DIAGNOSTICO">
+              <PropertyRef Name="ID_DIAGNOSTICO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="DIAGNOSTICO_RESULTADO_fk">
+          <End Role="DIAGNOSTICO" Type="Self.DIAGNOSTICO" Multiplicity="1" />
+          <End Role="RESULTADO" Type="Self.RESULTADO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DIAGNOSTICO">
+              <PropertyRef Name="ID_DIAGNOSTICO" />
+            </Principal>
+            <Dependent Role="RESULTADO">
+              <PropertyRef Name="ID_DIAGNOSTICO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PRODUTO_DOSAGEM_fk">
+          <End Role="PRODUTO" Type="Self.PRODUTO" Multiplicity="1" />
+          <End Role="DOSAGEM" Type="Self.DOSAGEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRODUTO">
+              <PropertyRef Name="ID_PRODUTO" />
+            </Principal>
+            <Dependent Role="DOSAGEM">
+              <PropertyRef Name="ID_PRODUTO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PRESCRICAO_RESULTADO_fk">
+          <End Role="PRESCRICAO" Type="Self.PRESCRICAO" Multiplicity="1" />
+          <End Role="RESULTADO" Type="Self.RESULTADO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRESCRICAO">
+              <PropertyRef Name="ID_PRESCRICAO" />
+            </Principal>
+            <Dependent Role="RESULTADO">
+              <PropertyRef Name="ID_PRESCRICAO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="USUARIO_PRODUTO_fk">
+          <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="1" />
+          <End Role="PRODUTO" Type="Self.PRODUTO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USUARIO">
+              <PropertyRef Name="ID_USUARIO" />
+            </Principal>
+            <Dependent Role="PRODUTO">
+              <PropertyRef Name="ID_USUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="DIAGNOSTICO_PARTES">
+          <End Role="PARTE_DIAGNOSTICO" Type="Self.PARTE_DIAGNOSTICO" Multiplicity="*" />
+          <End Role="PRESCRICAO" Type="Self.PRESCRICAO" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="PIEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CONSULTAs" EntityType="Self.CONSULTA" />
+          <EntitySet Name="DIAGNOSTICOes" EntityType="Self.DIAGNOSTICO" />
+          <EntitySet Name="DOSAGEMs" EntityType="Self.DOSAGEM" />
+          <EntitySet Name="FORMULARIOs" EntityType="Self.FORMULARIO" />
+          <EntitySet Name="PACIENTEs" EntityType="Self.PACIENTE" />
+          <EntitySet Name="PARTE_DIAGNOSTICO" EntityType="Self.PARTE_DIAGNOSTICO" />
+          <EntitySet Name="PRESCRICAOs" EntityType="Self.PRESCRICAO" />
+          <EntitySet Name="PRODUTOes" EntityType="Self.PRODUTO" />
+          <EntitySet Name="RESULTADOes" EntityType="Self.RESULTADO" />
+          <EntitySet Name="USUARIOs" EntityType="Self.USUARIO" />
+          <AssociationSet Name="CONSULTA_DIAGNOSTICO_fk" Association="Self.CONSULTA_DIAGNOSTICO_fk">
+            <End Role="CONSULTA" EntitySet="CONSULTAs" />
+            <End Role="DIAGNOSTICO" EntitySet="DIAGNOSTICOes" />
+          </AssociationSet>
+          <AssociationSet Name="CONSULTA_DOSAGEM_fk" Association="Self.CONSULTA_DOSAGEM_fk">
+            <End Role="CONSULTA" EntitySet="CONSULTAs" />
+            <End Role="DOSAGEM" EntitySet="DOSAGEMs" />
+          </AssociationSet>
+          <AssociationSet Name="FORMULARIO_CONSULTA_fk" Association="Self.FORMULARIO_CONSULTA_fk">
+            <End Role="FORMULARIO" EntitySet="FORMULARIOs" />
+            <End Role="CONSULTA" EntitySet="CONSULTAs" />
+          </AssociationSet>
+          <AssociationSet Name="PACIENTE_CONSULTA_fk" Association="Self.PACIENTE_CONSULTA_fk">
+            <End Role="PACIENTE" EntitySet="PACIENTEs" />
+            <End Role="CONSULTA" EntitySet="CONSULTAs" />
+          </AssociationSet>
+          <AssociationSet Name="DIAGNOSTICO_PARTE_DIAGNOSTICO_fk" Association="Self.DIAGNOSTICO_PARTE_DIAGNOSTICO_fk">
+            <End Role="DIAGNOSTICO" EntitySet="DIAGNOSTICOes" />
+            <End Role="PARTE_DIAGNOSTICO" EntitySet="PARTE_DIAGNOSTICO" />
+          </AssociationSet>
+          <AssociationSet Name="DIAGNOSTICO_RESULTADO_fk" Association="Self.DIAGNOSTICO_RESULTADO_fk">
+            <End Role="DIAGNOSTICO" EntitySet="DIAGNOSTICOes" />
+            <End Role="RESULTADO" EntitySet="RESULTADOes" />
+          </AssociationSet>
+          <AssociationSet Name="PRODUTO_DOSAGEM_fk" Association="Self.PRODUTO_DOSAGEM_fk">
+            <End Role="PRODUTO" EntitySet="PRODUTOes" />
+            <End Role="DOSAGEM" EntitySet="DOSAGEMs" />
+          </AssociationSet>
+          <AssociationSet Name="PRESCRICAO_RESULTADO_fk" Association="Self.PRESCRICAO_RESULTADO_fk">
+            <End Role="PRESCRICAO" EntitySet="PRESCRICAOs" />
+            <End Role="RESULTADO" EntitySet="RESULTADOes" />
+          </AssociationSet>
+          <AssociationSet Name="USUARIO_PRODUTO_fk" Association="Self.USUARIO_PRODUTO_fk">
+            <End Role="USUARIO" EntitySet="USUARIOs" />
+            <End Role="PRODUTO" EntitySet="PRODUTOes" />
+          </AssociationSet>
+          <AssociationSet Name="DIAGNOSTICO_PARTES" Association="Self.DIAGNOSTICO_PARTES">
+            <End Role="PARTE_DIAGNOSTICO" EntitySet="PARTE_DIAGNOSTICO" />
+            <End Role="PRESCRICAO" EntitySet="PRESCRICAOs" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PIModelStoreContainer" CdmEntityContainer="PIEntities">
+          <EntitySetMapping Name="CONSULTAs">
+            <EntityTypeMapping TypeName="PIModel.CONSULTA">
+              <MappingFragment StoreEntitySet="CONSULTA">
+                <ScalarProperty Name="ID_CONSULTA" ColumnName="ID_CONSULTA" />
+                <ScalarProperty Name="ID_FORMULARIO" ColumnName="ID_FORMULARIO" />
+                <ScalarProperty Name="ID_PACIENTE" ColumnName="ID_PACIENTE" />
+                <ScalarProperty Name="NOME_PACIENTE" ColumnName="NOME_PACIENTE" />
+                <ScalarProperty Name="NOME_RESPONSAVEL" ColumnName="NOME_RESPONSAVEL" />
+                <ScalarProperty Name="DATA_CONSULTA" ColumnName="DATA_CONSULTA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DIAGNOSTICOes">
+            <EntityTypeMapping TypeName="PIModel.DIAGNOSTICO">
+              <MappingFragment StoreEntitySet="DIAGNOSTICO">
+                <ScalarProperty Name="ID_DIAGNOSTICO" ColumnName="ID_DIAGNOSTICO" />
+                <ScalarProperty Name="ID_CONSULTA" ColumnName="ID_CONSULTA" />
+                <ScalarProperty Name="DATA_DIAGNOSTICO" ColumnName="DATA_DIAGNOSTICO" />
+                <ScalarProperty Name="NOME_PACIENTE" ColumnName="NOME_PACIENTE" />
+                <ScalarProperty Name="NUMERO_ITEM" ColumnName="NUMERO_ITEM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DOSAGEMs">
+            <EntityTypeMapping TypeName="PIModel.DOSAGEM">
+              <MappingFragment StoreEntitySet="DOSAGEM">
+                <ScalarProperty Name="ID_DOSAGEM" ColumnName="ID_DOSAGEM" />
+                <ScalarProperty Name="ID_CONSULTA" ColumnName="ID_CONSULTA" />
+                <ScalarProperty Name="ID_PRODUTO" ColumnName="ID_PRODUTO" />
+                <ScalarProperty Name="NOME_PACIENTE" ColumnName="NOME_PACIENTE" />
+                <ScalarProperty Name="NOME_RESPONSAVEL" ColumnName="NOME_RESPONSAVEL" />
+                <ScalarProperty Name="QUANTIDADE" ColumnName="QUANTIDADE" />
+                <ScalarProperty Name="PRODUTO" ColumnName="PRODUTO" />
+                <ScalarProperty Name="DESCRICAO" ColumnName="DESCRICAO" />
+                <ScalarProperty Name="DATA" ColumnName="DATA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FORMULARIOs">
+            <EntityTypeMapping TypeName="PIModel.FORMULARIO">
+              <MappingFragment StoreEntitySet="FORMULARIO">
+                <ScalarProperty Name="ID_FORMULARIO" ColumnName="ID_FORMULARIO" />
+                <ScalarProperty Name="PATOLODIA_DE_BASE" ColumnName="PATOLODIA_DE_BASE" />
+                <ScalarProperty Name="CIRURGIAS_ANTERIORES" ColumnName="CIRURGIAS_ANTERIORES" />
+                <ScalarProperty Name="TABAGISMO" ColumnName="TABAGISMO" />
+                <ScalarProperty Name="ETILISMO" ColumnName="ETILISMO" />
+                <ScalarProperty Name="HISTORICO_DE_ALERGIA" ColumnName="HISTORICO_DE_ALERGIA" />
+                <ScalarProperty Name="MEDICAMENTO_ATUAL" ColumnName="MEDICAMENTO_ATUAL" />
+                <ScalarProperty Name="PESO" ColumnName="PESO" />
+                <ScalarProperty Name="ALTURA" ColumnName="ALTURA" />
+                <ScalarProperty Name="IMC" ColumnName="IMC" />
+                <ScalarProperty Name="APITITE_USUAL" ColumnName="APITITE_USUAL" />
+                <ScalarProperty Name="PERDA_DE_PESO" ColumnName="PERDA_DE_PESO" />
+                <ScalarProperty Name="TURGO_DE_PELE" ColumnName="TURGO_DE_PELE" />
+                <ScalarProperty Name="ELIMINACAO_FEZES" ColumnName="ELIMINACAO_FEZES" />
+                <ScalarProperty Name="SONO_SATISFATORIO" ColumnName="SONO_SATISFATORIO" />
+                <ScalarProperty Name="USA_SONIFERO" ColumnName="USA_SONIFERO" />
+                <ScalarProperty Name="VIDA_SEXUAL" ColumnName="VIDA_SEXUAL" />
+                <ScalarProperty Name="FERIDA_INTERFERE" ColumnName="FERIDA_INTERFERE" />
+                <ScalarProperty Name="AJ_TOMAR_BANHO" ColumnName="AJ_TOMAR_BANHO" />
+                <ScalarProperty Name="AJ_VERTIRSE" ColumnName="AJ_VERTIRSE" />
+                <ScalarProperty Name="AJ_IR_BANHEIRO" ColumnName="AJ_IR_BANHEIRO" />
+                <ScalarProperty Name="AJ_SENTAR_LEVANTAR" ColumnName="AJ_SENTAR_LEVANTAR" />
+                <ScalarProperty Name="AJ_PREPARO_REFEICAO" ColumnName="AJ_PREPARO_REFEICAO" />
+                <ScalarProperty Name="AJ_TAREFA_DOMESTICA" ColumnName="AJ_TAREFA_DOMESTICA" />
+                <ScalarProperty Name="AJ_LAVAR_ROUPA" ColumnName="AJ_LAVAR_ROUPA" />
+                <ScalarProperty Name="AJ_DEAMBULAR" ColumnName="AJ_DEAMBULAR" />
+                <ScalarProperty Name="AJ_USO_MEIO_DE_TRANSPORTE" ColumnName="AJ_USO_MEIO_DE_TRANSPORTE" />
+                <ScalarProperty Name="FORCA_MOTORA" ColumnName="FORCA_MOTORA" />
+                <ScalarProperty Name="PARALISIA" ColumnName="PARALISIA" />
+                <ScalarProperty Name="PARESTESIA" ColumnName="PARESTESIA" />
+                <ScalarProperty Name="DEPEDENCIA_AUTOCUIDADO" ColumnName="DEPEDENCIA_AUTOCUIDADO" />
+                <ScalarProperty Name="HIGIENE_CORPORAL" ColumnName="HIGIENE_CORPORAL" />
+                <ScalarProperty Name="APR_MMII" ColumnName="APR_MMII" />
+                <ScalarProperty Name="APR_TRAUMA" ColumnName="APR_TRAUMA" />
+                <ScalarProperty Name="PQ_LESAO_PERNA_D" ColumnName="PQ_LESAO_PERNA_D" />
+                <ScalarProperty Name="PQ_LESA0_PERNA_E" ColumnName="PQ_LESA0_PERNA_E" />
+                <ScalarProperty Name="CONDICAO_PELE_UCERA" ColumnName="CONDICAO_PELE_UCERA" />
+                <ScalarProperty Name="CLASSIFICACAO_FERIDA" ColumnName="CLASSIFICACAO_FERIDA" />
+                <ScalarProperty Name="CARACTERISTICA_LESAO" ColumnName="CARACTERISTICA_LESAO" />
+                <ScalarProperty Name="ODOR" ColumnName="ODOR" />
+                <ScalarProperty Name="EXSUDATO" ColumnName="EXSUDATO" />
+                <ScalarProperty Name="GRANULACAO" ColumnName="GRANULACAO" />
+                <ScalarProperty Name="ESFACELO" ColumnName="ESFACELO" />
+                <ScalarProperty Name="ESCARA" ColumnName="ESCARA" />
+                <ScalarProperty Name="CONDICOES_BORDA" ColumnName="CONDICOES_BORDA" />
+                <ScalarProperty Name="TAMANHO_LESAO" ColumnName="TAMANHO_LESAO" />
+                <ScalarProperty Name="REGULACAO_TERMICA" ColumnName="REGULACAO_TERMICA" />
+                <ScalarProperty Name="REGULACAO_NEUROLOGICA" ColumnName="REGULACAO_NEUROLOGICA" />
+                <ScalarProperty Name="NIVEL_CONCIENCIA" ColumnName="NIVEL_CONCIENCIA" />
+                <ScalarProperty Name="REGULACAO_IMUNOLOGICA" ColumnName="REGULACAO_IMUNOLOGICA" />
+                <ScalarProperty Name="VACINACAO" ColumnName="VACINACAO" />
+                <ScalarProperty Name="PRECAO_ARTERIAL" ColumnName="PRECAO_ARTERIAL" />
+                <ScalarProperty Name="PRESENCA_EMATOMAS" ColumnName="PRESENCA_EMATOMAS" />
+                <ScalarProperty Name="EDEMA_MMII" ColumnName="EDEMA_MMII" />
+                <ScalarProperty Name="PULSO_PAPAVEIS" ColumnName="PULSO_PAPAVEIS" />
+                <ScalarProperty Name="PERCEPCAO_DOLOROSA" ColumnName="PERCEPCAO_DOLOROSA" />
+                <ScalarProperty Name="FATORES_DOR" ColumnName="FATORES_DOR" />
+                <ScalarProperty Name="FATORES_AUMETA_DOR" ColumnName="FATORES_AUMETA_DOR" />
+                <ScalarProperty Name="AGUA_TRATADA" ColumnName="AGUA_TRATADA" />
+                <ScalarProperty Name="COLETA_LIXO" ColumnName="COLETA_LIXO" />
+                <ScalarProperty Name="SENEAMENTO_BASICO" ColumnName="SENEAMENTO_BASICO" />
+                <ScalarProperty Name="ANIMAIS_DOMESTICO" ColumnName="ANIMAIS_DOMESTICO" />
+                <ScalarProperty Name="COBERTURA_PRIMARIAS" ColumnName="COBERTURA_PRIMARIAS" />
+                <ScalarProperty Name="CURATIVO_SOZINHO" ColumnName="CURATIVO_SOZINHO" />
+                <ScalarProperty Name="AUTOMEDITACAO" ColumnName="AUTOMEDITACAO" />
+                <ScalarProperty Name="CORBETURA_SEM_PRESCRICAO" ColumnName="CORBETURA_SEM_PRESCRICAO" />
+                <ScalarProperty Name="EXPLICAR_AP_UCERA" ColumnName="EXPLICAR_AP_UCERA" />
+                <ScalarProperty Name="SABE_COMO_PREVINIR_LESOES" ColumnName="SABE_COMO_PREVINIR_LESOES" />
+                <ScalarProperty Name="FOTORES_PRE_CICATRIZACAO" ColumnName="FOTORES_PRE_CICATRIZACAO" />
+                <ScalarProperty Name="SEN_TRITEZA" ColumnName="SEN_TRITEZA" />
+                <ScalarProperty Name="SEN_RAIVA" ColumnName="SEN_RAIVA" />
+                <ScalarProperty Name="SENT_ANSIEDADE" ColumnName="SENT_ANSIEDADE" />
+                <ScalarProperty Name="SENT_CONTRARIEDADE" ColumnName="SENT_CONTRARIEDADE" />
+                <ScalarProperty Name="SENT_TRAQUILIDADE" ColumnName="SENT_TRAQUILIDADE" />
+                <ScalarProperty Name="SENT_DESMOTIVACAO" ColumnName="SENT_DESMOTIVACAO" />
+                <ScalarProperty Name="VALORES_MSD" ColumnName="VALORES_MSD" />
+                <ScalarProperty Name="MSE" ColumnName="MSE" />
+                <ScalarProperty Name="MID" ColumnName="MID" />
+                <ScalarProperty Name="MIE" ColumnName="MIE" />
+                <ScalarProperty Name="CAL_ITB" ColumnName="CAL_ITB" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PACIENTEs">
+            <EntityTypeMapping TypeName="PIModel.PACIENTE">
+              <MappingFragment StoreEntitySet="PACIENTE">
+                <ScalarProperty Name="ID_PACIENTE" ColumnName="ID_PACIENTE" />
+                <ScalarProperty Name="NOME" ColumnName="NOME" />
+                <ScalarProperty Name="SEXO" ColumnName="SEXO" />
+                <ScalarProperty Name="NASCIMENTO" ColumnName="NASCIMENTO" />
+                <ScalarProperty Name="EMDERECO" ColumnName="EMDERECO" />
+                <ScalarProperty Name="LOCOMOCAO" ColumnName="LOCOMOCAO" />
+                <ScalarProperty Name="RENDA_FAMILIAR" ColumnName="RENDA_FAMILIAR" />
+                <ScalarProperty Name="RELIGIAO" ColumnName="RELIGIAO" />
+                <ScalarProperty Name="FILHOS" ColumnName="FILHOS" />
+                <ScalarProperty Name="ESCOLARIDADE" ColumnName="ESCOLARIDADE" />
+                <ScalarProperty Name="PROFISSAO" ColumnName="PROFISSAO" />
+                <ScalarProperty Name="ESTADO_CIVIL" ColumnName="ESTADO_CIVIL" />
+                <ScalarProperty Name="TELEFONE" ColumnName="TELEFONE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PARTE_DIAGNOSTICO">
+            <EntityTypeMapping TypeName="PIModel.PARTE_DIAGNOSTICO">
+              <MappingFragment StoreEntitySet="PARTE_DIAGNOSTICO">
+                <ScalarProperty Name="ID_PARTE_DIAGNOSTICO" ColumnName="ID_PARTE_DIAGNOSTICO" />
+                <ScalarProperty Name="ID_DIAGNOSTICO" ColumnName="ID_DIAGNOSTICO" />
+                <ScalarProperty Name="ITEM_PARTE" ColumnName="ITEM_PARTE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PRESCRICAOs">
+            <EntityTypeMapping TypeName="PIModel.PRESCRICAO">
+              <MappingFragment StoreEntitySet="PRESCRICAO">
+                <ScalarProperty Name="ID_PRESCRICAO" ColumnName="ID_PRESCRICAO" />
+                <ScalarProperty Name="DETALHES" ColumnName="DETALHES" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PRODUTOes">
+            <EntityTypeMapping TypeName="PIModel.PRODUTO">
+              <MappingFragment StoreEntitySet="PRODUTO">
+                <ScalarProperty Name="ID_PRODUTO" ColumnName="ID_PRODUTO" />
+                <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+                <ScalarProperty Name="NOME" ColumnName="NOME" />
+                <ScalarProperty Name="QUANTIDADE" ColumnName="QUANTIDADE" />
+                <ScalarProperty Name="VALIDADE" ColumnName="VALIDADE" />
+                <ScalarProperty Name="DESCRICAO" ColumnName="DESCRICAO" />
+                <ScalarProperty Name="DATA_ENTRADA" ColumnName="DATA_ENTRADA" />
+                <ScalarProperty Name="DATA_SAIDA" ColumnName="DATA_SAIDA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RESULTADOes">
+            <EntityTypeMapping TypeName="PIModel.RESULTADO">
+              <MappingFragment StoreEntitySet="RESULTADO">
+                <ScalarProperty Name="ID_RESULTADO" ColumnName="ID_RESULTADO" />
+                <ScalarProperty Name="ID_DIAGNOSTICO" ColumnName="ID_DIAGNOSTICO" />
+                <ScalarProperty Name="ID_PRESCRICAO" ColumnName="ID_PRESCRICAO" />
+                <ScalarProperty Name="NOME_PACIENTE" ColumnName="NOME_PACIENTE" />
+                <ScalarProperty Name="NUMERO_ITEM" ColumnName="NUMERO_ITEM" />
+                <ScalarProperty Name="DESCRICAO" ColumnName="DESCRICAO" />
+                <ScalarProperty Name="DATA" ColumnName="DATA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USUARIOs">
+            <EntityTypeMapping TypeName="PIModel.USUARIO">
+              <MappingFragment StoreEntitySet="USUARIO">
+                <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+                <ScalarProperty Name="NOME" ColumnName="NOME" />
+                <ScalarProperty Name="SEXO" ColumnName="SEXO" />
+                <ScalarProperty Name="NASCIMENTO" ColumnName="NASCIMENTO" />
+                <ScalarProperty Name="ENDERECO" ColumnName="ENDERECO" />
+                <ScalarProperty Name="TELEFONE" ColumnName="TELEFONE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="DIAGNOSTICO_PARTES" TypeName="PIModel.DIAGNOSTICO_PARTES" StoreEntitySet="DIAGNOSTICO_PARTES">
+            <EndProperty Name="PARTE_DIAGNOSTICO">
+              <ScalarProperty Name="ID_PARTE_DIAGNOSTICO" ColumnName="ID_PARTE_DIAGNOSTICO" />
+            </EndProperty>
+            <EndProperty Name="PRESCRICAO">
+              <ScalarProperty Name="ID_PRESCRICAO" ColumnName="ID_PRESCRICAO" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
