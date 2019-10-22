@@ -51,7 +51,7 @@ namespace PI
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            this.ListarContatos();
+            //this.ListarContatos();
         }
 
         private void ListarContatos()

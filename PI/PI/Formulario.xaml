@@ -1,0 +1,42 @@
+﻿<Window x:Class="PI.Formulario"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PI"
+        mc:Ignorable="d"
+        Title="Formulario" Height="600" Width="800">
+    <Grid>
+        <Label Content="Patologia de base" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="2.842,2.962" Height="25" Width="110" Margin="64,23,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="64,53,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="280"/>
+        <Label Content="Tabagismo" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="2.842,2.962" Height="25" Width="110" Margin="64,85,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="64,115,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="280"/>
+        <Label Content="Etilismo" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="2.842,2.962" Height="25" Width="110" Margin="64,147,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="64,177,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="280"/>
+        <Label Content="Historico de alergia" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="2.842,2.962" Height="25" Width="110" Margin="64,215,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="64,245,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="280"/>
+        <Label Content="Medicamento atual" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="2.842,2.962" Height="25" Width="110" Margin="64,279,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="64,309,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="280"/>
+        <Label Content="Peso" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="2.842,2.962" Height="25" Width="110" Margin="64,344,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="64,374,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="280"/>
+        <Label Content="Altura" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="2.842,2.962" Height="25" Width="110" Margin="64,410,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="64,440,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="280"/>
+        <Label Content="IMC" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="2.842,2.962" Height="25" Width="109" Margin="448,23,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="448,53,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="280"/>
+        <Label Content="Apetite Usual" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="2.842,2.962" Height="25" Width="109" Margin="448,85,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="448,115,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="280"/>
+        <Label Content="Perda de peso" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="2.842,2.962" Height="25" Width="109" Margin="448,147,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="448,177,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="280"/>
+        <Label Content="Turgor de pele" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="2.842,2.962" Height="25" Width="109" Margin="448,215,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="448,245,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="280"/>
+        <Label Content="Eliminação de fezes" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="2.842,2.962" Height="25" Width="109" Margin="448,279,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="448,309,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="280"/>
+        <Label Content="Sono satisftorio" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="2.842,2.962" Height="25" Width="109" Margin="448,344,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="448,374,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="280"/>
+        <Label Content="Uso de sonifero" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="2.842,2.962" Height="25" Width="109" Margin="448,410,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="448,440,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="280"/>
+        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="361,515,0,0" Click="Button_Click"/>
+
+
+    </Grid>
+</Window>

@@ -48,3 +48,34 @@ C:\Users\danie\OneDrive\Área de Trabalho\PI - BACKUP\PI\PI\obj\Debug\PI.csproj.
 C:\Users\danie\OneDrive\Área de Trabalho\PI - BACKUP\PI\PI\obj\Debug\PI.csproj.CopyComplete
 C:\Users\danie\OneDrive\Área de Trabalho\PI - BACKUP\PI\PI\obj\Debug\PI.exe
 C:\Users\danie\OneDrive\Área de Trabalho\PI - BACKUP\PI\PI\obj\Debug\PI.pdb
+C:\Users\Gabriel\Downloads\PI\PI\PI\bin\Debug\PI.exe.config
+C:\Users\Gabriel\Downloads\PI\PI\PI\bin\Debug\PI.exe
+C:\Users\Gabriel\Downloads\PI\PI\PI\bin\Debug\PI.pdb
+C:\Users\Gabriel\Downloads\PI\PI\PI\bin\Debug\EntityFramework.dll
+C:\Users\Gabriel\Downloads\PI\PI\PI\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Gabriel\Downloads\PI\PI\PI\bin\Debug\EntityFramework.xml
+C:\Users\Gabriel\Downloads\PI\PI\PI\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Gabriel\Downloads\PI\PI\PI\obj\Debug\PI.csprojAssemblyReference.cache
+C:\Users\Gabriel\Downloads\PI\PI\PI\obj\Debug\Diagnostico.g.cs
+C:\Users\Gabriel\Downloads\PI\PI\PI\obj\Debug\MainWindow.g.cs
+C:\Users\Gabriel\Downloads\PI\PI\PI\obj\Debug\Paciente.g.cs
+C:\Users\Gabriel\Downloads\PI\PI\PI\obj\Debug\Usuario.g.cs
+C:\Users\Gabriel\Downloads\PI\PI\PI\obj\Debug\App.g.cs
+C:\Users\Gabriel\Downloads\PI\PI\PI\obj\Debug\PI_Content.g.cs
+C:\Users\Gabriel\Downloads\PI\PI\PI\obj\Debug\PI_MarkupCompile.cache
+C:\Users\Gabriel\Downloads\PI\PI\PI\obj\Debug\PI_MarkupCompile.lref
+C:\Users\Gabriel\Downloads\PI\PI\PI\obj\Debug\Diagnostico.baml
+C:\Users\Gabriel\Downloads\PI\PI\PI\obj\Debug\MainWindow.baml
+C:\Users\Gabriel\Downloads\PI\PI\PI\obj\Debug\Paciente.baml
+C:\Users\Gabriel\Downloads\PI\PI\PI\obj\Debug\Usuario.baml
+C:\Users\Gabriel\Downloads\PI\PI\PI\obj\Debug\PI.g.resources
+C:\Users\Gabriel\Downloads\PI\PI\PI\obj\Debug\PI.Properties.Resources.resources
+C:\Users\Gabriel\Downloads\PI\PI\PI\obj\Debug\PI.csproj.GenerateResource.cache
+C:\Users\Gabriel\Downloads\PI\PI\PI\obj\Debug\PI.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel\Downloads\PI\PI\PI\obj\Debug\PI.csproj.CopyComplete
+C:\Users\Gabriel\Downloads\PI\PI\PI\obj\Debug\PI.exe
+C:\Users\Gabriel\Downloads\PI\PI\PI\obj\Debug\PI.pdb
+C:\Users\Gabriel\Downloads\PI\PI\PI\obj\Debug\Formulario.g.cs
+C:\Users\Gabriel\Downloads\PI\PI\PI\obj\Debug\Formulario.baml
+C:\Users\Gabriel\Downloads\PI\PI\PI\obj\Debug\Formulariop2 .g.cs
+C:\Users\Gabriel\Downloads\PI\PI\PI\obj\Debug\Formulariop2.g.cs
