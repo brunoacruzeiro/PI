@@ -15,20 +15,18 @@ using System.Windows.Shapes;
 namespace PI
 {
     /// <summary>
-    /// Lógica interna para Formulario.xaml
+    /// Lógica interna para Form.xaml
     /// </summary>
-    public partial class Formulario : Window
+    public partial class Form : Window
     {
-        public Formulario()
+        public Form()
         {
             InitializeComponent();
         }
 
-        public string StartupUri { get; private set; }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            StartupUri = "Formulariop2.xaml";
+
         }
     }
 }

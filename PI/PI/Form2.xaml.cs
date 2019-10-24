@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace PI
 {
     /// <summary>
-    /// Lógica interna para Formulario.xaml
+    /// Lógica interna para Form2.xaml
     /// </summary>
-    public partial class Formulario : Window
+    public partial class Form2 : Window
     {
-        public Formulario()
+        public Form2()
         {
             InitializeComponent();
         }

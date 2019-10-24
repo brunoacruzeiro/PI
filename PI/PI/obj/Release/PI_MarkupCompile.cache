@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-C:\Users\luizp\Desktop\PI\PI\PI\obj\Debug\
+C:\Users\luizp\Desktop\PI\PI\PI\obj\Release\
 PI
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\luizp\Desktop\PI\PI\PI\App.xaml
 6976821522
 2182918126
-241521920288
+23-1884036900
 181657511047
 Diagnostico.xaml;Form.xaml;Form2.xaml;MainWindow.xaml;Paciente.xaml;Usuario.xaml;
 

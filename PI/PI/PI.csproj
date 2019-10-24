@@ -76,14 +76,14 @@
     <Compile Include="DOSAGEM.cs">
       <DependentUpon>ModeloDeDados.tt</DependentUpon>
     </Compile>
-    <Compile Include="Formulariop2.xaml.cs">
-      <DependentUpon>Formulariop2.xaml</DependentUpon>
+    <Compile Include="Form.xaml.cs">
+      <DependentUpon>Form.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.xaml.cs">
+      <DependentUpon>Form2.xaml</DependentUpon>
     </Compile>
     <Compile Include="FORMULARIO.cs">
       <DependentUpon>ModeloDeDados.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Formulario.xaml.cs">
-      <DependentUpon>Formulario.xaml</DependentUpon>
     </Compile>
     <Compile Include="ModeloDeDados.cs">
       <AutoGen>True</AutoGen>
@@ -118,11 +118,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Formulariop2.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="Form.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Formulario.xaml">
+    <Page Include="Form2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
